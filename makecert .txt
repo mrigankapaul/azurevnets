@@ -1,0 +1,5 @@
+Create Root Cert
+ makecert -sky exchange -r -n "CN=TPlazNetCertRoot" -pe -a sha1 -len 2048 -ss My "TPlazNetCertRoot.cer" 
+
+Create Client Cert
+makecert.exe -n "CN=TPlazNetClient" -pe -sky exchange -m 96 -ss My -in "TPlazNetCert" -is my -a sha1
